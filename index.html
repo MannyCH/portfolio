@@ -7,50 +7,36 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
+      	<link type="text/css" href="css/jquery_menu/jquery.mmenu.oncanvas.css" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-	   	<!--Using the hamburger menu display code-->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.oncanvas.js"></script>
 
-
-	    <link rel="stylesheet" type="text/css" media="all" href="css/hamburger.css" />
-
+		<script type="text/javascript">
+		 jQuery(document).ready(function( $ ) {
+		    $("#menu").mmenu({
+               "slidingSubmenus": false,
+		       "offCanvas": {
+		          "position": "right"
+		       },
+		       "navbars": [
+		          true
+		       ]
+		    });
+		 });
+		</script>
 	</head>
 	<body>
-		<div id="container">
-			<header>
-			    <div id="hamburger">
-			        <div></div>
-			        <div></div>
-			        <div></div>
-			    </div>
-			</header>
-		    <nav>
-		  		<ul>
-		  			<li>
-		  				<a href="#">menuitem 1</a>
-		  			</li>
-		  			<li>
-		  				<a href="#">menuitem 1</a>
-		  			</li>
-		  			<li>
-		  				<a href="#">menuitem 1</a>
-		  			</li>
-		  			<li>
-		  				<a href="#">menuitem 1</a>
-		  			</li>
-		  			<li>
-		  				<a href="#">menuitem 1</a>
-		  			</li>
-		  			<li>
-		  				<a href="#">menuitem 1</a>
-		  			</li>
-		  		</ul>
-			</nav>
-
-			<div id="contentLayer"></div>
-
+		<div class="page">
+			<div class="header">
+				<a href="#menu"></a>
+				Demo
+			</div>
 			<div id="content">
 				<div class="presentation">
-					<div class="container-fluid">
+
 						<div class="row">
 							<div>
 								<img src="img/manuel.jpg">
@@ -60,9 +46,20 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-		<script src="js/hamburger.js"></script>
+		<nav id="menu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/about">About us</a>
+			   <ul>
+			      <li><a href="/about/history">History</a></li>
+			      <li><a href="/about/team">The team</a></li>
+			      <li><a href="/about/address">Our address</a></li>
+			   </ul>
+			</li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+		</nav>
+
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	</body>
 </html>
