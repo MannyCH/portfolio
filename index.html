@@ -2,63 +2,73 @@
 <html lang="de">
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-		<link href="css/base.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-      	<link type="text/css" href="css/jquery_menu/jquery.mmenu.oncanvas.css" rel="stylesheet" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
-		<script type="text/javascript" src="js/jquery.mmenu.oncanvas.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/jquerymmenu/menu.css" />
+		<link type="text/css" rel="stylesheet" href="css/animate/animate.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquerymmenu/jquery.mmenu.all.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquerymmenu/jquery.mmenu.all.min.js"></script>
+   		<script src="js/transformicons/transformicons.js"></script>
+	    <link rel="stylesheet" href="css/transformicons/style.css"/>
 
 		<script type="text/javascript">
-		 jQuery(document).ready(function( $ ) {
-		    $("#menu").mmenu({
-               "slidingSubmenus": false,
-		       "offCanvas": {
-		          "position": "right"
-		       },
-		       "navbars": [
-		          true
-		       ]
-		    });
-		 });
+
+		 	jQuery(document).ready(function( $ ) {
+	            $("#my-menu").mmenu({
+	               "slidingSubmenus": false,
+	               "offCanvas": {
+	                  "position": "right"
+	               },
+	            }, {
+
+       				clone: true
+
+	            });
+         	});
+
 		</script>
+		<link href="css/base.css" rel="stylesheet">
+
 	</head>
 	<body>
 		<div class="page">
 			<div class="header">
-				<a href="#menu"></a>
-				Demo
+				<div class="container">
+					<a href="#my-menu" id="hamburger"><span class="top-bar"></span>
+				   	<span class="middle-bar"></span>
+				   	<span class="bottom-bar"></span></a>
+				</div>
 			</div>
-			<div id="content">
-				<div class="presentation">
-
-						<div class="row">
-							<div>
+			<div id="presentation">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<div class="animated fadeInUp">
 								<img src="img/manuel.jpg">
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-6">
+							<div class="animated fadeInUp presentation_text">
+								Ich bin Manuel Rohrbach und möchte bei euch arbeiten.
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<nav id="menu">
+		<nav id="my-menu">
 		<ul>
 			<li><a href="/">Home</a></li>
-			<li><a href="/about">About us</a>
-			   <ul>
-			      <li><a href="/about/history">History</a></li>
-			      <li><a href="/about/team">The team</a></li>
-			      <li><a href="/about/address">Our address</a></li>
-			   </ul>
-			</li>
-			<li><a href="/contact">Contact</a></li>
+			<li><a href="/contact">Was kann ich</a></li>
+			<li><a href="/contact">Wer bin ich</a></li>
+			<li><a href="/contact">Download-Center</a></li>
 		</ul>
 		</nav>
+
+
+
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	</body>
