@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic,700);
 html,
 body,
 ul,
@@ -6,8 +7,16 @@ ol {
   padding: 0; }
 
 body {
-  font: 100% Helvetica, sans-serif;
+  font: 100% Lato, sans-serif;
   color: white;
   background-color: black; }
+
+#presentation {
+  margin-top: 50px; }
+
+.presentation_text {
+  padding-top: 50px;
+  font-size: 35px;
+  font-weight: 300; }
 
 /*# sourceMappingURL=base.css.map */
